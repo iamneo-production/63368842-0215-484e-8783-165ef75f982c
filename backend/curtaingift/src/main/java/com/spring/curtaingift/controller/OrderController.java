@@ -24,7 +24,8 @@ public class OrderController {
 
     @PostMapping("/user/addOrder")
 	public Boolean addCart(@RequestBody List<Order> order) {
-        if(service.saveCart(order)!=null){
+        if(service.saveCart(order)!=null)
+        {
             System.out.print("true");
             return true;
         }

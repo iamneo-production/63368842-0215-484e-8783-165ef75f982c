@@ -14,34 +14,35 @@ public class Order {
     @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String OrderName;
-    private String OrderDesc;
-    private String GiftName;
-    private String ThemeName;
-    private Date OrderDate;
-    private int OrderPrice;
-    private String OrderAddress;
-    private String OrderPhone;
-    private String OrderEmail;
+    private String ordername;
+    private String orderdesc;
+    private String giftname;
+    private String themename;
+    private Date orderdate;
+    private int orderprice;
+    private String orderaddress;
+    private String orderphone;
+    private String orderemail;
     private String Username;
+
 
 
     public Order(){
 
     }
 
-    public Order(int id,String orderName,String themeName, String Username, String giftName, String orderDesc,Date orderDate, int orderPrice, String orderAddress, String orderPhone,String orderEmail ){
-        super();
+    public Order(int id,String ordername,String themename, String Username, String giftname, String orderdesc,Date orderdate, int orderprice, String orderaddress, String orderphone,String orderemail ){
+
         this.id = id;
-        GiftName = giftName;
-        ThemeName = themeName;
-        OrderName = orderName;
-        OrderDesc = orderDesc;
-        OrderDate = orderDate;
-        OrderPrice = orderPrice;
-        OrderAddress = orderAddress;
-        OrderPhone = orderPhone;
-        OrderEmail = orderEmail;
+       this.giftname = giftname;
+        this.themename = themename;
+        this.ordername = ordername;
+        this.orderdesc = orderdesc;
+        this.orderdate = orderdate;
+        this.orderprice = orderprice;
+        this.orderaddress = orderaddress;
+        this.orderphone = orderphone;
+        this.orderemail = orderemail;
         this.Username = Username;
     }
 
@@ -53,76 +54,77 @@ public class Order {
         this.id = id;
     }
 
-    public String getOrderName() {
-        return this.OrderName;
+    
+    public String getOrdername() {
+        return this.ordername;
     }
 
-    public void setOrderName(String OrderName) {
-        this.OrderName = OrderName;
+    public void setOrdername(String ordername) {
+        this.ordername = ordername;
     }
 
-    public String getOrderDesc() {
-        return this.OrderDesc;
+    public String getOrderdesc() {
+        return this.orderdesc;
     }
 
-    public void setOrderDesc(String OrderDesc) {
-        this.OrderDesc= OrderDesc;
+    public void setOrderdesc(String orderdesc) {
+        this.orderdesc = orderdesc;
     }
 
-    public Date getOrderDate() {
-        return this.OrderDate;
+    public String getGiftname() {
+        return this.giftname;
     }
 
-    public void setOrderDate(Date OrderDate) {
-        this.OrderDate = OrderDate;
+    public void setGiftname(String giftname) {
+        this.giftname = giftname;
     }
 
-    public int getOrderPrice() {
-        return this.OrderPrice;
+    public String getThemename() {
+        return this.themename;
     }
 
-    public void setOrderPrice(int OrderPrice) {
-        this.OrderPrice = OrderPrice;
+    public void setThemename(String themename) {
+        this.themename = themename;
     }
 
-    public String getOrderAddress() {
-        return this.OrderAddress;
+    public Date getOrderdate() {
+        return this.orderdate;
     }
 
-    public void setOrderAddress(String OrderAddress) {
-        this.OrderAddress = OrderAddress;
+    public void setOrderdate(Date orderdate) {
+        this.orderdate = orderdate;
     }
 
-    public String getOrderPhone() {
-        return this.OrderPhone;
+    public int getOrderprice() {
+        return this.orderprice;
     }
 
-    public void setOrderPhone(String OrderPhone) {
-        this.OrderPhone = OrderPhone;
+    public void setOrderprice(int orderprice) {
+        this.orderprice = orderprice;
     }
 
-    public String getOrderEmail() {
-        return this.OrderEmail;
+    public String getOrderaddress() {
+        return this.orderaddress;
     }
 
-    public void setOrderEmail(String OrderEmail) {
-        this.OrderEmail = OrderEmail;
+    public void setOrderaddress(String orderaddress) {
+        this.orderaddress = orderaddress;
     }
 
-    public String getGiftName() {
-        return this.GiftName;
+    public String getOrderphone() {
+        return this.orderphone;
     }
 
-    public void setGiftName(String GiftName) {
-        this.GiftName = GiftName;
+    public void setOrderphone(String orderphone) {
+        this.orderphone = orderphone;
     }
 
-    public String getThemeName() {
-        return this.ThemeName;
+    public String getOrderemail() {
+        return this.orderemail;
     }
 
-    public void setThemeName(String ThemeName) {
-        this.ThemeName = ThemeName;
+    public void setOrderemail(String orderemail) {
+        this.orderemail = orderemail;
     }
 
     public String getUsername() {

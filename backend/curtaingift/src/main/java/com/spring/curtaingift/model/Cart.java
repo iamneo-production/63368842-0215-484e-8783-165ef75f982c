@@ -32,7 +32,6 @@ public class Cart {
     }
 
     public Cart(int id,String Ordername,String Themename, String Username, String Giftname, String Orderdesc,Date Orderdate, int Orderprice, String Orderaddress, String Orderphone,String Orderemail ){
-        super();
         this.id = id;
         this.Giftname = Giftname;
         this.Themename = Themename;
@@ -90,8 +89,8 @@ public class Cart {
         return this.Orderdate;
     }
 
-    public void setOrderdate(Date Orderdate) {
-        this.Orderdate = Orderdate;
+    public void setOrderdate(Date date) {
+        this.Orderdate = date;
     }
 
     public int getOrderprice() {

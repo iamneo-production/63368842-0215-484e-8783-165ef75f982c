@@ -8,6 +8,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.transaction.annotation.Transactional;
 
 public interface CartRepository extends JpaRepository<Cart, Integer> {
+    @Query(value = "SELECT * FROM cart WHERE username =?1", nativeQuery = true)
+    public List<Cart> getmycart(String username);
     @Query("SELECT COUNT(*) FROM Cart WHERE username=?1")
     long cartcount(String username);
     @Modifying

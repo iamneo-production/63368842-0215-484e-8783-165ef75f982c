@@ -24,13 +24,13 @@ public class OrderServices {
 
     public Order updateOrder(Order order){
         Order existingOrder = repository.findById(order.getId()).orElse(null);
-        existingOrder.setOrderName(order.getOrderName());
-        existingOrder.setOrderDesc(order.getOrderDesc());
-        existingOrder.setOrderDate(order.getOrderDate());
-        existingOrder.setOrderPrice(order.getOrderPrice());
-        existingOrder.setOrderAddress(order.getOrderAddress());
-        existingOrder.setOrderPhone(order.getOrderPhone());
-        existingOrder.setOrderEmail(order.getOrderEmail());
+        existingOrder.setOrdername(order.getOrdername());
+        existingOrder.setOrderdesc(order.getOrderdesc());
+        existingOrder.setOrderdate(order.getOrderdate());
+        existingOrder.setOrderprice(order.getOrderprice());
+        existingOrder.setOrderaddress(order.getOrderaddress());
+        existingOrder.setOrderphone(order.getOrderphone());
+        existingOrder.setOrderemail(order.getOrderemail());
         return repository.save(existingOrder);
     }
 
@@ -41,6 +41,7 @@ public class OrderServices {
         return null;
     }
     public void deleteOrder(int id) {
+        repository.deleteById(id);
     }
     public Order addOrder(Order order) {
         return null;

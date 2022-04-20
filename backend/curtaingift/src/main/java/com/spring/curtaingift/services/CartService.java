@@ -8,6 +8,8 @@ import com.spring.curtaingift.repository.CartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
+
 @Service
 public class CartService {
     @Autowired
@@ -22,8 +24,24 @@ public class CartService {
     public long countCart(String username){
         return repository.cartcount(username);
     }
-    public Boolean deleteCart(String username){
-        System.out.print(repository.deleteCart(username));
-        return true;
+	public void deleteCart(int id) {
+		repository.deleteById(id);
+	}
+    public List<Cart> getmycart(String username){
+        return repository.getmycart(username);
+    }
+    public Cart updateCart(Cart cart){
+        Cart existingCart = repository.findById(cart.getId()).orElse(null);
+        existingCart.setOrdername(cart.getOrdername());
+        existingCart.setOrderdesc(cart.getOrderdesc());
+        existingCart.setOrderdate(cart.getOrderdate());
+        existingCart.setOrderphone(cart.getOrderphone());
+        existingCart.setOrderaddress(cart.getOrderaddress());
+        existingCart.setOrderemail(cart.getOrderemail());
+        existingCart.setThemename(cart.getThemename());
+
+        return repository.save(existingCart);
     }
 }
+
+
